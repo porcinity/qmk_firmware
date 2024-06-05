@@ -35,32 +35,32 @@ combo_t key_combos[] = {
 
 // bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 //   switch(keycode) {
-//     case tn-th:
+//     case tn_th:
 //       if (pressed) {
 //         SEND_STRING("th");
 //       }
 //       break;
-//     case sn-sh:
+//     case sn_sh:
 //       if (pressed) {
 //         SEND_STRING("sh");
 //       }
 //       break;
-//     case cn-ch:
+//     case cn_ch:
 //       if (pressed) {
 //         SEND_STRING("ch");
 //       }
 //       break;
-//     case fl-ph:
+//     case fl_ph:
 //       if (pressed) {
 //         SEND_STRING("ph");
 //       }
 //       break;
-//     case gm-gh:
+//     case gm_gh:
 //       if (pressed) {
 //         SEND_STRING("gh");
 //       }
 //       break;
-//     case xm-wh:
+//     case xm_wh:
 //       if (pressed) {
 //         SEND_STRING("wh");
 //       }
@@ -69,8 +69,6 @@ combo_t key_combos[] = {
 // }
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
-  if (pressed) {
-    uprintf("Combo index: %d pressed\n", combo_index);
   switch(combo_index) {
     case tn_th:
       if (pressed) {
@@ -103,9 +101,6 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
       }
       break;
   }
-} else {
-    uprintf("Combo index: %d released\n", combo_index);
-    }
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
